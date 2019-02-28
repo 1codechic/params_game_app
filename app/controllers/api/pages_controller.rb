@@ -1,7 +1,7 @@
 class Api::PagesController < ApplicationController
 
   def query_action 
-    @name = params['name'].upcase
+    @name = params[:name].upcase
     if @name.start_with?("A")
       @message = "Hey, your name starts with the first letter of the alphabet."  
     elsif
