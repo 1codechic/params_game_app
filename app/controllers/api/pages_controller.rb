@@ -36,4 +36,17 @@ class Api::PagesController < ApplicationController
     render 'game_segment_view.json.jbuilder'
   end
 
+  def body_params_action
+    user_input = params[:user_guess].to_i
+    answer = 32
+    if user_input > answer
+      @message = "hey you guessed too high"
+    elsif user_input < answer
+      @message = "hey you guessed too low"
+    elsif user_input == answer
+      @message = "You guessed right"
+    end
+    render 'body_params.json.jbuilder'
+  end
+
 end

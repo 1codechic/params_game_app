@@ -10,5 +10,7 @@ Rails.application.routes.draw do
     get "/query_url" => "pages#query_action"
     get "/game_url" => "pages#game_action"
     get "/game_segment_route/:user_guess" => "pages#game_segment"
+    #body_param
+    post "/guess_number" => "pages#body_params_action"
   end
 end
